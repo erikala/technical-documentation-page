@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>A Technical Documentation Page</title>
+</head>
+<body>
+<main id="main-doc">
+  <section class="main-section" id="introduction">
+      <header>Introduction</header>
+      <p>CSS Grid Layout is a two-dimensional layout system for the web.
+        It lets you lay content out in rows and columns, and has many features
+        that make building complex layouts straightforward. This article will
+        give you all you need to know to get started with page layout.</p>
+  </section>
+  <section class="main-section" id="prerequisites">
+      <header>Prerequisites</header>
+      <p>HTML basics, and an idea of how CSS works.</p>
+  </section>
+  <section class="main-section" id="grid_layout">
+      <header>Grid Layout</header>
+      <p>A grid is simply a collection of horizontal and vertical lines creating
+        a pattern against which we can line up our design elements. They help us
+        to create designs where elements don’t jump around or change width as we
+        move from page to page, providing greater consistency on our websites.</p>
+      <p>A grid will typically have columns, rows, and then gaps between each
+        row and column — commonly referred to as gutters.</p>
+  </section>
+  <section class="main-section" id="defining_a_grid">
+      <header>Defining a grid</header>
+      <p>To define a grid we use the grid value of the display property. As with
+        Flexbox, this switches on Grid Layout, and all of the direct children of
+        the container become grid items. Add this to the CSS inside your file:</p>
+        <p>Unlike flexbox, the items will not immediately look any different.
+          Declaring display: grid gives you a one column grid, so your items will
+          continue to display one below the other as they do in normal flow.</p>
+        <p>To see something that looks more grid-like, we will need to add some
+          columns to the grid. Let's add three 200-pixel columns here. You can
+          use any length unit, or percentages to create these column tracks.</p>
+        <p>Add the 2nd declaration to your CSS rule, then reload the page, and
+          you should see that the items have rearranged themselves one into each
+          cell of the created grid.</p>
+  </section>
+  <section class="main-section" id="flexible_grids">
+      <header>Flexible grids</header>
+      <p>In addition to creating grids using lengths and percentages, we can use
+         the fr unit to flexibly size grid rows and columns. This unit represents
+          one fraction of the available space in the grid container.</p>
+      <p>Change your track listing to the following definition, creating three
+        1fr tracks.</p>
+      <p>You should now see that you have flexible tracks. The fr unit distributes
+         space in proportion, therefore you can give different positive values to
+        your tracks, for example if you change the definition like so:</p>
+      <p>The first track now gets 2fr of the available space and the other two
+        tracks get 1fr, making the first track larger. You can mix fr units and
+        fixed length tracks — in such a case the space needed for the fixed tracks
+         is taken away before the space is distributed to the other tracks.</p>
+  </section>
+  <section class="main-section" id="gaps_between_tracks">
+      <header>Gaps between tracks></header>
+      <p>To create gaps between tracks we use the properties grid-column-gap for
+        gaps between columns, grid-row-gap for gaps between rows, and grid-gap
+        to set both at once.</p>
+      <p>These gaps can be any length unit or a percentage, but not an fr unit.</p>
+  </section>
+  <section class="main-section" id="repeating_track_listings">
+      <header>Repeating track listings</header>
+      <p>You can repeat all, or a section of, your track listing using repeat
+        notation. Change your track listing to the following:</p>
+      <p>You will now get 3 1fr tracks just as before. The first value passed to
+        the repeat function is how many times you want the listing to repeat,
+        while the second value is a track listing, which may be one or more tracks
+        that you want to repeat.</p>
+  </section>
+  <section class="main-section" id="implicit_and_explicit_grid">
+      <header>Implicit and explicit grid</header>
+      <p>We have only specified column tracks so far, and yet rows are being created
+        to hold our content. This is an example of the explicit versus the implicit
+        grid. The explicit grid is the one that you create using grid-template-columns
+        or grid-template-rows. The implicit grid is created when content is placed
+        outside of that grid — such as into our rows. The explicit and implicit grids
+         are analogous to the main and cross flexbox axes.</p>
+        <p>By default, tracks created in the implicit grid are auto sized, which in
+          general means that they are large enough to fit their content. If you wish
+          to give the tracks the browser creates a size you can use the grid-auto-rows
+           and grid-auto-columns properties. If you add grid-auto-rows with a value of 
+           100px to your CSS, you will see that those created rows are now 100 pixels tall.</p>
+  </section>
+
+</main>
