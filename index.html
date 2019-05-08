@@ -32,12 +32,19 @@
       <p>To define a grid we use the grid value of the display property. As with
         Flexbox, this switches on Grid Layout, and all of the direct children of
         the container become grid items. Add this to the CSS inside your file:</p>
+            <pre><code>.container {</code></pre>
+            <pre><code>display: grid;</code></pre>
+            <pre><code>}</code></pre>
         <p>Unlike flexbox, the items will not immediately look any different.
           Declaring display: grid gives you a one column grid, so your items will
           continue to display one below the other as they do in normal flow.</p>
         <p>To see something that looks more grid-like, we will need to add some
           columns to the grid. Let's add three 200-pixel columns here. You can
           use any length unit, or percentages to create these column tracks.</p>
+              <pre><code>.container {</code></pre>
+              <pre><code>display: grid;</code></pre>
+              <pre><code>grid-template-columns: 200px 200px 200px;</code></pre>
+              <pre><code>}</code></pre>
         <p>Add the 2nd declaration to your CSS rule, then reload the page, and
           you should see that the items have rearranged themselves one into each
           cell of the created grid.</p>
@@ -48,10 +55,18 @@
          the fr unit to flexibly size grid rows and columns. This unit represents
           one fraction of the available space in the grid container.</p>
       <p>Change your track listing to the following definition, creating three
-        1fr tracks.</p>
+          1fr tracks.</p>
+            <pre><code>.container {</code></pre>
+            <pre><code>display: grid;</code></pre>
+            <pre><code>grid-template-columns: 1fr 1fr 1fr;</code></pre>
+            <pre><code>}</code></pre>
       <p>You should now see that you have flexible tracks. The fr unit distributes
          space in proportion, therefore you can give different positive values to
         your tracks, for example if you change the definition like so:</p>
+            <pre><code>.container {</code></pre>
+            <pre><code>display: grid;</code></pre>
+            <pre><code>grid-template-columns: 2fr 1fr 1fr;</code></pre>
+            <pre><code>}</code></pre>
       <p>The first track now gets 2fr of the available space and the other two
         tracks get 1fr, making the first track larger. You can mix fr units and
         fixed length tracks — in such a case the space needed for the fixed tracks
@@ -62,12 +77,22 @@
       <p>To create gaps between tracks we use the properties grid-column-gap for
         gaps between columns, grid-row-gap for gaps between rows, and grid-gap
         to set both at once.</p>
+            <pre><code>.container {</code></pre>
+            <pre><code>display: grid;</code></pre>
+            <pre><code>grid-template-columns: 2fr 1fr 1fr;</code></pre>
+            <pre><code>grid-gap: 20px;</code></pre>
+            <pre><code>}</code></pre>
       <p>These gaps can be any length unit or a percentage, but not an fr unit.</p>
   </section>
   <section class="main-section" id="repeating_track_listings">
       <header>Repeating track listings</header>
       <p>You can repeat all, or a section of, your track listing using repeat
         notation. Change your track listing to the following:</p>
+            <pre><code>.container {</code></pre>
+            <pre><code>display: grid;</code></pre>
+            <pre><code>grid-template-columns: repeat(3, 1fr);</code></pre>
+            <pre><code>grid-gap: 20px;</code></pre>
+            <pre><code>}</code></pre>
       <p>You will now get 3 1fr tracks just as before. The first value passed to
         the repeat function is how many times you want the listing to repeat,
         while the second value is a track listing, which may be one or more tracks
@@ -81,11 +106,18 @@
         or grid-template-rows. The implicit grid is created when content is placed
         outside of that grid — such as into our rows. The explicit and implicit grids
          are analogous to the main and cross flexbox axes.</p>
+           <pre><code>.container {</code></pre>
+           <pre><code>display: grid;</code></pre>
+           <pre><code>grid-template-columns: repeat(3, 1fr);</code></pre>
+           <pre><code>grid-auto-rows: 100px;</code></pre>
+           <pre><code>grid-gap: 20px;</code></pre>
+           <pre><code>}</code></pre>
         <p>By default, tracks created in the implicit grid are auto sized, which in
           general means that they are large enough to fit their content. If you wish
           to give the tracks the browser creates a size you can use the grid-auto-rows
-           and grid-auto-columns properties. If you add grid-auto-rows with a value of 
+           and grid-auto-columns properties. If you add grid-auto-rows with a value of
            100px to your CSS, you will see that those created rows are now 100 pixels tall.</p>
-  </section>
-
-</main>
+     </section>
+  </main>
+</body>
+</html>
