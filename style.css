@@ -1,0 +1,27 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1em;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Grid */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(300px, auto) 1fr;
+  grid-gap: 1em;
+  grid-template-areas: "navbar mainContent"
+}
+
+#navbar {
+  grid-area: navbar;
+  position: fixed;
+}
+
+#main-doc {
+  grid-area: mainContent;
+
+}

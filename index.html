@@ -3,36 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <title>A Technical Documentation Page</title>
 </head>
 <body>
-    <nav class="navbar">
+  <div class="grid-container"> <!---Grid container starts -->
+    <nav id="navbar">
         <header>CSS Grid Documentation</header>
-        <a href="#introduction" class="nav-link">Introduction</a>
-        <a href="#prerequisites" class="nav-link">Prerequisites</a>
-        <a href="#grid_layout" class="nav-link">Grid layout</a>
-        <a href="#defining_a_grid" class="nav-link">Defining a grid</a>
-        <a href="#flexible_grids" class="nav-link">Flexible grids</a>
-        <a href="#gaps_between_tracks" class="nav-link">Gaps between tracks</a>
-        <a href="#repeating_track_listings" class="nav-link">Repeating track listings</a>
-        <a href="#implicit_and_explicit_grid" class="nav-link">Implicit and explicit grid</a>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#Prerequisites" class="nav-link">Prerequisites</a>
+        <a href="#Grid_layout" class="nav-link">Grid layout</a>
+        <a href="#Defining_a_grid" class="nav-link">Defining a grid</a>
+        <a href="#Flexible_grids" class="nav-link">Flexible grids</a>
+        <a href="#Gaps_between_tracks" class="nav-link">Gaps between tracks</a>
+        <a href="#Repeating_track_listings" class="nav-link">Repeating track listings</a>
+        <a href="#Implicit_and_explicit_grid" class="nav-link">Implicit and explicit grid</a>
     </nav>
 <main id="main-doc">
-  <section class="main-section" id="introduction">
+  <section class="main-section" id="Introduction">
       <header>Introduction</header>
       <p>CSS Grid Layout is a two-dimensional layout system for the web.
         It lets you lay content out in rows and columns, and has many features
         that make building complex layouts straightforward. This article will
         give you all you need to know to get started with page layout.</p>
   </section>
-  <section class="main-section" id="prerequisites">
+  <section class="main-section" id="Prerequisites">
       <header>Prerequisites</header>
       <ul>
           <li>HTML basics</li>
           <li>An idea of how CSS works</li>
       </ul>
   </section>
-  <section class="main-section" id="grid_layout">
+  <section class="main-section" id="Grid_layout">
       <header>Grid Layout</header>
       <p>A grid is simply a collection of horizontal and vertical lines creating
         a pattern against which we can line up our design elements. They help us
@@ -45,7 +48,7 @@
             <li>gutters (gaps between each row and column)</li>
         </ul>
   </section>
-  <section class="main-section" id="defining_a_grid">
+  <section class="main-section" id="Defining_a_grid">
       <header>Defining a grid</header>
       <p>To define a grid we use the grid value of the display property. As with
         Flexbox, this switches on Grid Layout, and all of the direct children of
@@ -67,7 +70,7 @@
           you should see that the items have rearranged themselves one into each
           cell of the created grid.</p>
   </section>
-  <section class="main-section" id="flexible_grids">
+  <section class="main-section" id="Flexible_grids">
       <header>Flexible grids</header>
       <p>In addition to creating grids using lengths and percentages, we can use
          the fr unit to flexibly size grid rows and columns. This unit represents
@@ -90,8 +93,8 @@
         fixed length tracks — in such a case the space needed for the fixed tracks
          is taken away before the space is distributed to the other tracks.</p>
   </section>
-  <section class="main-section" id="gaps_between_tracks">
-      <header>Gaps between tracks></header>
+  <section class="main-section" id="Gaps_between_tracks">
+      <header>Gaps between tracks</header>
       <p>To create gaps between tracks we use the properties grid-column-gap for
         gaps between columns, grid-row-gap for gaps between rows, and grid-gap
         to set both at once.</p>
@@ -102,7 +105,7 @@
             <pre><code>}</code></pre>
       <p>These gaps can be any length unit or a percentage, but not an fr unit.</p>
   </section>
-  <section class="main-section" id="repeating_track_listings">
+  <section class="main-section" id="Repeating_track_listings">
       <header>Repeating track listings</header>
       <p>You can repeat all, or a section of, your track listing using repeat
         notation. Change your track listing to the following:</p>
@@ -116,7 +119,7 @@
         while the second value is a track listing, which may be one or more tracks
         that you want to repeat.</p>
   </section>
-  <section class="main-section" id="implicit_and_explicit_grid">
+  <section class="main-section" id="Implicit_and_explicit_grid">
       <header>Implicit and explicit grid</header>
       <p>We have only specified column tracks so far, and yet rows are being created
         to hold our content. This is an example of the explicit versus the implicit
@@ -135,7 +138,8 @@
           to give the tracks the browser creates a size you can use the grid-auto-rows
            and grid-auto-columns properties. If you add grid-auto-rows with a value of
            100px to your CSS, you will see that those created rows are now 100 pixels tall.</p>
-     </section>
-  </main>
+       </section>
+    </main>
+  </div> <!---Grid container ends -->
 </body>
 </html>
