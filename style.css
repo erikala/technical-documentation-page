@@ -37,12 +37,19 @@ body {
   padding: 15px;
   margin: 5px;
   text-decoration: none;
+  font-size: 1.2em;
   color: black;
 }
 
+#navbar a:hover {
+	color: #3131B2;
+  font-weight: bold;
+}
+
 #main-header {
-  font-size: 1.25em;
+  font-size: 1.9em;
   padding: 10px;
+  font-family: 'Teko', sans-serif;
 }
 
 /* main documentation */
@@ -55,7 +62,31 @@ header {
 
 code {
   background-color: #E8F3FB;
-  font-size: .9em;
+  font-size: 1em;
   margin: 15px 0;
   padding: 10px;
+}
+
+#copyright {
+  text-align: center;
+  line-height: 1;
+  font-size: .9em;
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 750px) {
+
+ .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "navbar" "mainContent";
+  }
+
+ #navbar {
+   position: inherit;
+ }
+
 }
