@@ -5,23 +5,57 @@ html {
 body {
   font-size: 1em;
   font-family: 'Poppins', sans-serif;
+  line-height: 1.5em;
 }
 
 /* Grid */
 
 .grid-container {
   display: grid;
-  grid-template-columns: minmax(300px, auto) 1fr;
-  grid-gap: 1em;
+  grid-template-columns: minmax(280px, auto) 1fr;
+  grid-gap: 1.25em;
   grid-template-areas: "navbar mainContent"
 }
 
 #navbar {
   grid-area: navbar;
   position: fixed;
+  background-color: #C9DFF4;
 }
 
 #main-doc {
   grid-area: mainContent;
+  padding: 20px;
 
+}
+
+/* navigation bar */
+
+#navbar a {
+  display: block;
+  border: 2px solid #a0b2c3;
+  padding: 15px;
+  margin: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+#main-header {
+  font-size: 1.25em;
+  padding: 10px;
+}
+
+/* main documentation */
+
+header {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+code {
+  background-color: #E8F3FB;
+  font-size: .9em;
+  margin: 15px 0;
+  padding: 10px;
 }
